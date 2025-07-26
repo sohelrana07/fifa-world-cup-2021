@@ -86,7 +86,7 @@ main {
 .banner-image img {
   width: 100%;
   display: block;
-  animation: banner-player-animation 1s ease-in forwards;
+  animation: banner-player-animation 1s ease-in backwards;
 }
 
 /* Banner Player Animation section style here */
@@ -140,6 +140,23 @@ main {
   gap: 24px;
   grid-template-columns: 315px calc(100% - 315px - 24px);
   margin-bottom: 130px;
+  animation: match-update-animation 0.7s ease-out forwards;
+}
+
+/* match update animation here */
+@keyframes match-update-animation{
+  0%{
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  50%{
+    opacity: 0.7;
+    transform: translateX(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 .match-container {
